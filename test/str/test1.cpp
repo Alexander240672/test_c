@@ -69,5 +69,6 @@ int main()
     inserttail(list,60);
     inserttail(list,50);
     printlist(list);
+    free(list);
     return 0;
 }
