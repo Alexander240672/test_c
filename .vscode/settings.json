@@ -1,0 +1,8 @@
+{
+    "code-runner.executorMap": {
+        "c": "cd \"$dir\" && chcp 65001 > nul && gcc -fexec-charset=utf-8 \"$fileName\" -o \"output/$fileNameWithoutExt.exe\" && \"./output/$fileNameWithoutExt.exe\"",
+        "cpp": "cd \"$dir\" && chcp 65001 > nul && g++ -fexec-charset=utf-8 \"$fileName\" -o \"output/$fileNameWithoutExt.exe\" && \"./output/$fileNameWithoutExt.exe\""
+    },
+    "code-runner.runInTerminal": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译并运行",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "编译程序",
+                "运行程序"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "编译程序",
+            "type": "cppbuild",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/test/str/test20_c.cpp",
+                "${workspaceFolder}/test/str/test20_contact.cpp",
+                "-o",
+                "${workspaceFolder}/test/str/output/test20_c.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "运行程序",
+            "type": "shell",
+            "command": "${workspaceFolder}/test/str/output/test20_c.exe",
+            "problemMatcher": []
+        }
+    ]
+}

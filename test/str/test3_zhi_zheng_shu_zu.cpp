@@ -1,3 +1,4 @@
+//指针数组
 #include <stdio.h>
 void print(int (*p)[5],int r,int c)
 {
