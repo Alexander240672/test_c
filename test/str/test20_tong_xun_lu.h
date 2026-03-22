@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <stdlib.h>
+#include <stdlib.h>
 #define max 100
 #define max_name 20
 #define max_sex 10
@@ -30,3 +32,10 @@ void addcontact(contact* pc);
 void showcontact(const contact* pc);
 //删除指定联系人
 void delcontact(contact* pc);
+//查找联系人
+void searchcontact(contact* pc);
+//修改联系人
+void modifycontact(contact* pc);
+//排序联系人
+//按照名字排序
+void sortcontact(contact* pc);

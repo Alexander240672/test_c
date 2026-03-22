@@ -11,6 +11,7 @@ void menu()
 }
 int main()
 {
+    system("chcp 65001 > nul");
     int input = 0;
     contact con;//通讯录
     //初始化通讯录
@@ -29,13 +30,16 @@ int main()
                 delcontact(&con);
                 break;
             case 3:
+                searchcontact(&con);
                 break;
             case 4:
+            modifycontact(&con);
                 break;
             case 5:
                 showcontact(&con);
                 break;
             case 6:
+                sortcontact(&con);
                 break;
             case 0:
                 printf("退出通讯录\n");
