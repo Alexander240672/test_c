@@ -4,6 +4,9 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <stdlib.h>
+#include <errno.h>
+#define default_sz 3
+#define inc_sz 2
 #define max 100
 #define max_name 20
 #define max_sex 10
@@ -19,13 +22,24 @@ typedef struct peoinfo
     char addr[max_addr];
 }peoinfo;
 //通讯录
+//静态版本
+// typedef struct contact
+// {
+//     peoinfo data[100];
+//     int count;//记录当前通讯录实际人的个数
+// }contact;
+
+//动态版本
 typedef struct contact
 {
-    peoinfo data[100];
+    peoinfo* data;
     int count;//记录当前通讯录实际人的个数
+    //当前通讯录的容量
+    int capacity;
 }contact;
+
 //初始化通讯录
-void initcontact(contact* pc);
+int initcontact(contact* pc);
 //添加联系人
 void addcontact(contact* pc);
 //打印通讯录信息
@@ -39,3 +53,5 @@ void modifycontact(contact* pc);
 //排序联系人
 //按照名字排序
 void sortcontact(contact* pc);
+//销毁通讯录
+void destroycontact(contact* pc);
